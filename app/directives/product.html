@@ -1,0 +1,21 @@
+<div class="cart-table__product--image">
+	<img src="{{image}}" alt="{{name}}">	
+</div>
+
+<div class="cart-table__product--name">
+	<a href="#">{{ name }}</a>
+</div>
+
+<div class="cart-table__product--values">
+	<pre>{{ price | currency:'R$' }}</pre>
+	<p> {{ price * choosed | currency:'R$' }}</p>
+	
+</div>
+
+<div class="cart-table__product--quantity">
+	<label class="qty-label" for="quantity">Quantidade</label>
+	<input type="number" min="1" value="{{1}}" max="{{quantity}}" ng-model="choosed">
+</div>
+
+<div ng-transclude></div>
+

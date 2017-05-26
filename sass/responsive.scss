@@ -1,0 +1,130 @@
+@media screen and (max-width: 920px) {
+	.header__menu {
+		.header__menu--item {
+			font-size: 2vw;
+		}
+	}	
+
+	.cart-table__product--name {
+		line-height: 1.25em;
+		a {
+			font-size: 16px;
+			line-height: 1em;
+		}
+	}
+
+	.cart-table__product--quantity {
+		input { font-size: 12px }
+	}
+
+	.cart-table__product--values {
+		p { font-size: 16px }
+	
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.cart-table {
+		.cart-table__product {
+			.cart-table__product--image	{
+				display: none;
+			}
+		}
+	} 
+}
+
+@media screen and (max-width: 640px) {
+
+	.header__menu {display: none}
+	.central-grid.fully-width-elements { @include justify-content(center) }
+
+}
+
+@media screen and (max-width: 570px) {
+
+	.cart-table {
+		background-size: 135px;
+		.cart-table__product {
+
+			.cart-table__product--name {
+				a { 
+					font-size: 13px;
+					line-height: 1.25em;
+				}
+			}
+
+			.cart-table__remove-button {
+				width: 40px;
+				height: 40px;
+				background-size: 50%;
+			}
+		}
+	} 
+
+	.cart-table__product--quantity{
+		input { font-size: 15px }
+	} 
+
+}
+
+@media screen and (max-width: 480px) {
+
+	.cart-table {
+		.cart-table__product {
+			@include flex-direction(column);
+			margin: 15px 0;
+			.cart-table__product--image	{
+				display: block;
+			}
+			.cart-table__product--name {
+				width: 100%;
+				text-align: center;
+				a { font-size: 16px }
+			}
+			.cart-table__product--values {
+				width: 100%;
+			    margin: 0 0 5px;
+				pre, p	{
+					font-size: 18px;
+					text-align: center;
+				}
+			} 
+
+			.cart-table__product--quantity {
+				@include flex-direction(row);
+				@include justify-content(center);
+			    margin: 0 0 10px;
+				width: 100%;
+				.qty-label { 
+					font-size: 16px;
+					padding: 5px 10px;
+				}
+				input { width: 35px }
+			}
+
+			.cart-table__remove-button { margin: 0 0 10px }
+
+			.cart-table__product--image {
+			    width: initial;
+			    height: initial;
+			    margin: 0 0 0px;
+		        background-size: 30%;
+			    img {
+    				height: 90px;
+			    }
+			}
+		}
+	} 
+
+}
+
+
+
+
+
+
+
+
+

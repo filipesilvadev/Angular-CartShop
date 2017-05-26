@@ -1,0 +1,42 @@
+.header {
+	@include gradient-vertical(#000000, #424242);
+	border-bottom: 1px solid #000;
+	margin:  0 0 80px;
+	.fully-width-elements {
+		@include align-items(center);
+	}
+	.header__logo-container {
+		margin: 5px 0 0;
+		@include display-flex;
+		max-height: 130px;
+		.header__logo-container--logo {
+		    width: 195px;
+		    height: 170px;
+			display: inline-block;
+			background: url('../img/knights-logo.png')no-repeat center / contain;
+			font-size: 0em;
+			color: transparent;
+		}
+	}
+}
+
+.header__menu {
+	.header__menu--item {
+		font-family: $default;
+		letter-spacing: 3px;
+		display: inline-block;
+		margin: 0 20px;
+		padding: 10px 0;
+		text-decoration: none;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 100;
+		font-size: 1.35vw;
+		border-bottom: 1px dotted transparent;
+		&:hover, &.active {
+			color: $light-yellow;
+			border-bottom: 1px dotted $dark-gray;
+		}
+	}
+}
+

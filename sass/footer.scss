@@ -1,0 +1,16 @@
+.footer {
+	@include gradient-vertical(#000000, #424242);
+	margin: 100px 0 0;
+	padding: 20px 0;
+	color: white;
+	.footer__markup {
+		font-family: $knight-serif;
+		letter-spacing: 2px;
+	}
+	.footer__asing {
+		font-family: $default;
+		font-style: italic;
+		color: $dark-gray;
+		letter-spacing: 1px;
+	}
+}

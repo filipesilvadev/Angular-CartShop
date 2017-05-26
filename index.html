@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="App">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Knights Shop</title>
+		<link href="https://fonts.googleapis.com/css?family=Cinzel|Lato" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/default.css">
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>		
+		<script type="text/javascript" src="app/controllers/CartController.js"></script>
+		<script type="text/javascript" src="app/directives/structureTags.js"></script>
+	</head>
+	<body class="main-body">
+		<header class="header">
+			<div class="central-grid fully-width-elements">
+				<h1 class="header__logo-container">
+					<a href="#" class="header__logo-container--logo">
+						Knight's Shop
+					</a>
+				</h1>
+				<nav class="header__menu">
+					<a href="#" class="header__menu--item">
+						Shop
+					</a>
+					<a href="#" class="header__menu--item">
+						Loot
+					</a>
+					<a href="#" class="header__menu--item">
+						Skills
+					</a>
+					<a href="#" class="header__menu--item active">
+						Cart
+					</a>
+				</nav>
+			</div>
+		</header>
+		<div class="cart-table" ng-controller="CartController">
+			<div class="central-grid">
+				<product class="cart-table__product" ng-repeat="product in products" image="{{product.image}}" name="{{product.name}}" price="{{product.price}}" quantity="{{product.quantity}}">
+					<button class="cart-table__remove-button" ng-click="remove($index)">
+						Remover
+					</button>	
+				</product>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="central-grid fully-width-elements">
+			<p class="footer__markup">Knights &copy; 2017</p>
+			<p class="footer__asing">#Teste Intercase AngularJs.</p>
+		</footer>
+	</body>
+</html>
